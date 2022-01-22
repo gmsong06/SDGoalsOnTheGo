@@ -14,22 +14,30 @@ struct Leaderboard: View {
             Image("circleLogo")
                 .resizable()
                 .frame(width: 200, height: 200)
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350, height: 75)
-                .foregroundColor(Color.gold)
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350, height: 75)
-                .foregroundColor(Color.silver)
-                .offset(y: -5)
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 350, height: 75)
-                .foregroundColor(Color.bronze)
-                .offset(y: -10)
-            ForEach(0..<20) { i in
+            ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 350, height: 75)
-                    .foregroundColor(Color.offWhite)
-                    .offset(y: -(CGFloat(15 + i * 5)))
+                    .foregroundColor(Color.gold)
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 350, height: 75)
+                    .foregroundColor(Color.silver)
+                    .offset(y: -5)
+            }
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 350, height: 75)
+                    .foregroundColor(Color.bronze)
+                    .offset(y: -10)
+            }
+            ForEach(0..<20) { i in
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 350, height: 75)
+                        .foregroundColor(Color.offWhite)
+                        .offset(y: -(CGFloat(15 + i * 5)))
+                }
             }
             
         }
