@@ -18,6 +18,8 @@ struct Leaderboard: View {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(width: 350, height: 75)
                     .foregroundColor(Color.gold)
+                Text("gmsong")
+                    .font(.headline)
             }
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
