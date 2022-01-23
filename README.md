@@ -13,7 +13,7 @@ The app also includes a badge system which includes (so far) 7 badges:
 - 50 Tasks
 - 100 Tasks
 - 200 Tasks
-<br />
+
 You are able to acquire these badges through claiming tasks along with its points. Your overall point, task, and badge count is available on your profile page.
 <br />
 Here is a brief summary of all the pages:
