@@ -18,6 +18,7 @@ You are able to acquire these badges through claiming tasks along with its point
 <br />
 Here is a brief summary of all the pages:
 <br />
+
 **Home**
 <br />
 This page lets you read and learn about all 17 Sustainable Development Goals. In each Goal there is an introduction and some statistics. This is meant to be a brief overview of the topic. Each Goal page also includes a list of 5 tasks that you can add to your Task List that relate to this certain Goal along with links that lead to further information.
