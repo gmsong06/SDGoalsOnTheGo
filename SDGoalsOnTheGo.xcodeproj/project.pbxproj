@@ -20,7 +20,6 @@
 		702BEBFD279CBD4300736606 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF3279CBD4300736606 /* Profile.swift */; };
 		702BEBFE279CBD4300736606 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF4279CBD4300736606 /* Tab.swift */; };
 		702BEBFF279CBD4300736606 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF5279CBD4300736606 /* Tasks.swift */; };
-		702BEC00279CBD4300736606 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF6279CBD4300736606 /* Contact.swift */; };
 		702BEC01279CBD4300736606 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF7279CBD4300736606 /* ImagePicker.swift */; };
 		702BEC02279CBD4300736606 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF8279CBD4300736606 /* ImageSlider.swift */; };
 		702BEC03279CBD4300736606 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BEBF9279CBD4300736606 /* Leaderboard.swift */; };
@@ -88,7 +87,6 @@
 		702BEBF3279CBD4300736606 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		702BEBF4279CBD4300736606 /* Tab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		702BEBF5279CBD4300736606 /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
-		702BEBF6279CBD4300736606 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		702BEBF7279CBD4300736606 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		702BEBF8279CBD4300736606 /* ImageSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
 		702BEBF9279CBD4300736606 /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 				702BEBF1279CBD4300736606 /* Badges.swift */,
 				702BEBF4279CBD4300736606 /* Tab.swift */,
 				702BEBFA279CBD4300736606 /* MenuView.swift */,
-				702BEBF6279CBD4300736606 /* Contact.swift */,
 				702BEBF5279CBD4300736606 /* Tasks.swift */,
 				702BEBF7279CBD4300736606 /* ImagePicker.swift */,
 				702BEBF2279CBD4300736606 /* LoginView.swift */,
@@ -419,7 +416,6 @@
 			files = (
 				702BEC2F279CBE0200736606 /* Goal10.swift in Sources */,
 				702BEC04279CBD4300736606 /* MenuView.swift in Sources */,
-				702BEC00279CBD4300736606 /* Contact.swift in Sources */,
 				702BEC12279CBDE800736606 /* Goal17.swift in Sources */,
 				702BEBFE279CBD4300736606 /* Tab.swift in Sources */,
 				702BEC2D279CBE0200736606 /* Goal4.swift in Sources */,

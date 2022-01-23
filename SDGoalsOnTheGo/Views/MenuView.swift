@@ -32,18 +32,6 @@ struct MenuView: View {
                 .padding(.top, 30)
             })
             
-            NavigationLink(destination: Contact(), label: {
-                HStack {
-                    Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.white)
-                        .imageScale(.large)
-                    Text("Suggest")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                }
-                .padding(.top, 30)
-            })
-            
             Spacer()
         }
             .padding()
