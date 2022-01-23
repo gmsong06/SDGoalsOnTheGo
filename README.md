@@ -40,7 +40,7 @@ A page where you can see your ranking compared to other users registered on the 
 
 ## Installation
 1. Download XCode IDE
-2. Go to the SDGoalsOnTheGo folder and download all the SwiftUI files
+2. Go to the SDGoalsOnTheGo folder, located in the main branch and download all the SwiftUI files
 3. Make sure to also download the Assets.xcassets folder which includes all the images in the app
 4. Once all the files are in XCode, you can run the code in the IPhone Simulator with the run button.
 
