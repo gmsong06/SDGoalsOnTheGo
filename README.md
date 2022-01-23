@@ -38,3 +38,14 @@ This is where the user can view their badges.
 <br />
 A page where you can see your ranking compared to other users registered on the app (work in progress)
 
+## Installation
+1. Download XCode IDE
+2. Go to the SDGoalsOnTheGo folder and download all the SwiftUI files
+3. Make sure to also download the Assets.xcassets folder which includes all the images in the app
+4. Once all the files are in XCode, you can run the code in the IPhone Simulator with the run button.
+
+## Image Credits
+- https://www.un.org/sustainabledevelopment/news/communications-material/
+- https://aviationbenefits.org/
+- https://www.povertyusa.org/facts
+- https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/key-statistics-graphics/
