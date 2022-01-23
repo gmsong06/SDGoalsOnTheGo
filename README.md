@@ -39,13 +39,15 @@ This is where the user can view their badges.
 A page where you can see your ranking compared to other users registered on the app (work in progress)
 
 ## Installation
-1. Download XCode IDE
-2. Go to the SDGoalsOnTheGo folder, located in the main branch and download all the SwiftUI files
+1. Download XCode IDE (only available for Mac)
+2. Go to the SDGoalsOnTheGo folder, located in the main branch and download all the SwiftUI files and the GoogleService-Info.plist file (Models folder)
 3. Make sure to also download the Assets.xcassets folder which includes all the images in the app
-4. Once all the files are in XCode, you can run the code in the IPhone Simulator with the run button.
+4. Once all the files are in XCode, you can run the code in the IPhone Simulator with the triangle shaped run button.
+
+![image](https://user-images.githubusercontent.com/94801056/150691481-05ed378c-ae66-42ab-ac87-33792a0e406c.png)
 
 NOTE: Also make sure to download the Firebase SDK into the XCode Project. To do this go to File > Swift Packages > Add Package Dependency. When prompted add the Firebase Apple platforms SDK repository: https://github.com/firebase/firebase-ios-sdk. The specific package dependencies for this app will be **Firebase Firestore**, **Firebase Auth**, and **Firebase Storage**
- 
+
 ## Image Credits
 - https://www.un.org/sustainabledevelopment/news/communications-material/
 - https://aviationbenefits.org/
