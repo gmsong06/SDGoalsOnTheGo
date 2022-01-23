@@ -13,6 +13,8 @@ struct Tasks: View {
     @State var badgeEarned = false
     @State var amt = 0
     @State var taskAmt = 0
+    @State private var fadeInOut = false
+    @State private var checked = false
     var body: some View {
         VStack {
             List(model.list) { item in
@@ -25,7 +27,23 @@ struct Tasks: View {
                                 .foregroundColor(Color.gray)
                         }
                         Spacer()
+                        Group {
+                            if checked {
+                                Text("Claimed")
+                                    .font(.headline)
+                                    .foregroundColor(Color.buttonGreen)
+                                    .onAppear() {
+                                        withAnimation(Animation.easeInOut(duration: 0.7)) {
+                                            fadeInOut.toggle()
+                                        }
+                                    }.opacity(fadeInOut ? 0 : 1)
+                                
+                            }
+                            
+                        }
                         Button(action: {
+                            checked.toggle()
+                            
                             amt = pointModel.addPoints(adding: item.points)
                             if amt >= 500 {
                                 if !badge.badges.contains("point500") {
@@ -71,9 +89,9 @@ struct Tasks: View {
                                 }
                             }
                             model.deleteData(toDelete: item)
-    
                         }, label: {
-                            Text("CLAIM")
+                            Image(systemName: "checkmark")
+                                .foregroundColor(Color.buttonGreen)
                         })
                             .buttonStyle(BorderlessButtonStyle())
                             .sheet(isPresented: $badgeEarned) {
@@ -84,6 +102,7 @@ struct Tasks: View {
                             model.deleteData(toDelete: item)
                         }, label: {
                             Image(systemName: "minus.circle")
+                                .foregroundColor(Color.red)
                         })
                     }
                 }
@@ -95,18 +114,32 @@ struct Tasks: View {
                 TextField("Points", text: $points)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                Button(action: {
-                    model.addData(name: name, points: Int(points) ?? 0, uid: userID)
-                    name = ""
-                    points = ""
-                }, label: {
-                    Text("Add Task")
-                })
-                Button(action: {
-                    model.getData()
-                }, label: {
-                    Text("UPDATE")
-                })
+                HStack {
+                    Button(action: {
+                        model.addData(name: name, points: Int(points) ?? 0, uid: userID)
+                        name = ""
+                        points = ""
+                        checked.toggle()
+                    }, label: {
+                        Text("Add Task")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.buttonGreen)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                    })
+                    Button(action: {
+                        model.getData()
+                        checked.toggle()
+                    }, label: {
+                        Text("Update")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.buttonGreen)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                    })
+                }
             }
             .padding()
         }
@@ -116,5 +149,11 @@ struct Tasks: View {
         model.getData()
         pointModel.getData()
         countModel.getData()
+    }
+}
+
+extension Color {
+    public static var buttonGreen: Color {
+        return Color(UIColor(red: 47/255, green: 158/255, blue: 75/255, alpha: 1.0))
     }
 }
