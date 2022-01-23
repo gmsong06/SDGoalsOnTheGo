@@ -15,12 +15,14 @@ struct LoginView: View {
     
     @State var url = URL(string: "")
     @State var images = [Int]()
-
+    @State var isLoading = false
+    @State var timeDone = false
     var body: some View {
         NavigationView {
             if loggedIn {
                 Tab(model: model, usernameModel: usernameModel)
             }
+            
             ScrollView {
                 VStack(spacing: 16) {
                     Picker(selection: $isLoginMode) {
@@ -73,6 +75,7 @@ struct LoginView: View {
                     
                     Button {
                         handleAction(email: email)
+                        startNetworkCall()
                     } label: {
                         HStack {
                             Spacer()
@@ -81,10 +84,19 @@ struct LoginView: View {
                                 .padding(.vertical, 10)
                                 .font(.system(size: 14, weight: .semibold))
                             Spacer()
-                        }.background(Color.blue)
+                        }.background(Color.buttonGreen)
                     }
-                    Text(self.errorMessage)
-                        .foregroundColor(Color.red)
+                    if isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle(tint: .buttonGreen))
+                            .scaleEffect(3)
+                            .offset(y: -125)
+                    }
+                    if timeDone {
+                        Text("Successfully created account")
+                            .font(.headline)
+                            .foregroundColor(Color.buttonGreen)
+                    }
                 }
                 .padding()
                 
@@ -98,7 +110,13 @@ struct LoginView: View {
         }
         .accentColor(.black)
     }
-    
+    private func startNetworkCall() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+            isLoading = false
+            timeDone = true
+        }
+    }
     private func handleAction(email: String) {
         if isLoginMode {
             loginUser(email: email)
@@ -153,7 +171,6 @@ struct LoginView: View {
         FirebaseManager.shared.firestore.collection("users")
             .document(uid).setData(userData) { error in
                 if let error = error {
-                    print(error)
                     self.errorMessage = "\(error)"
                 }
                 print("Success")

@@ -14,7 +14,7 @@ struct Tasks: View {
     @State var amt = 0
     @State var taskAmt = 0
     @State private var fadeInOut = false
-    @State private var checked = false
+    @State private var checked = true
     var body: some View {
         VStack {
             List(model.list) { item in
