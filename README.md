@@ -44,6 +44,8 @@ A page where you can see your ranking compared to other users registered on the 
 3. Make sure to also download the Assets.xcassets folder which includes all the images in the app
 4. Once all the files are in XCode, you can run the code in the IPhone Simulator with the run button.
 
+NOTE: Also make sure to download the Firebase SDK into the XCode Project. To do this go to File > Swift Packages > Add Package Dependency. When prompted add the Firebase Apple platforms SDK repository: https://github.com/firebase/firebase-ios-sdk. The specific package dependencies for this app will be **Firebase Firestore**, **Firebase Auth**, and **Firebase Storage**
+ 
 ## Image Credits
 - https://www.un.org/sustainabledevelopment/news/communications-material/
 - https://aviationbenefits.org/
